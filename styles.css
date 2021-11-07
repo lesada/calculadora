@@ -7,12 +7,14 @@
     border-radius: 5%;
     box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2), 0 0 2rem rgba(0, 0, 0, 0.2);
     margin: auto;
+    
 
 }
 
 .botoes {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 button {
@@ -25,7 +27,7 @@ button {
     height: 4rem;
 
     cursor: pointer;
-    margin: 1px;
+    margin: 0.2rem;
 }
 
 #display {
@@ -43,6 +45,10 @@ button {
     display: flex;
     flex-direction: row;
     flex-direction: column;
+}
+
+.operadores-avancados {
+    display: flex;
 }
 
 .numeros-linha {
