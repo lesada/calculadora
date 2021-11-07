@@ -21,28 +21,28 @@
             <div class="operadores-avancados">
                 <button>%</button>
                 <button>√</button>
-                <button>CE</button>
+                <button onClick="clearNumeros()">CE</button>
                 <button onClick="onOff()" id="onOff">On</button>
             </div>
             <div class="numeros">
                 <div class="numeros-linha">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button onClick="displayNumeros(7)">7</button>
+                    <button onClick="displayNumeros(8)">8</button>
+                    <button onClick="displayNumeros(9)">9</button>
                 </div>
                 <div class="numeros-linha">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button onClick="displayNumeros(4)">4</button>
+                    <button onClick="displayNumeros(5)">5</button>
+                    <button onClick="displayNumeros(6)">6</button>
                 </div>
                 <div class="numeros-linha">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button onClick="displayNumeros(1)">1</button>
+                    <button onClick="displayNumeros(2)">2</button>
+                    <button onClick="displayNumeros(3)">3</button>
                 </div>
                 <div class="numeros-linha">
                     <button>.</button>
-                    <button>0</button>
+                    <button onClick="displayNumeros(0)">0</button>
                     <button>=</button>
                 </div>
             </div>
