@@ -47,12 +47,13 @@ input:focus {
     margin-bottom: 1rem;
     margin-top: 2rem;
 
-    background-color: #798369;
+    background-color: #313131;
     border-radius: 5px;
     border: none;
 
     /* font-family: 'Arial', sans-serif; */
-    font-size: 35px
+    font-size: 35px;
+    color: #313131;
 }
 
 .display-div{
