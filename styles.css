@@ -4,9 +4,13 @@
     width: 25rem;
     height: 30rem;
 
-    border-radius: 0.5rem;
+    border-radius: 5%;
     box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2), 0 0 2rem rgba(0, 0, 0, 0.2);
     margin: auto;
+}
+
+.botoes {
+    display: flex;
 }
 
 button {
@@ -22,8 +26,21 @@ button {
     margin: 1px;
 }
 
+/* .display-div {
+    width: 100%;
+} */
+
+.display {
+    width: 100%;
+    height: 5rem;
+}
+
 .operadores {
     display: flex;
     flex-direction: row;
     flex-direction: column;
+}
+
+.numeros-linha {
+    display: flex;
 }
