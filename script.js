@@ -24,3 +24,8 @@ function clearNumeros() {
     var display = document.getElementById("display");
     display.value = "";
 }
+
+function calcular() {
+    var display = document.getElementById("display");
+    display.value = eval(display.value);
+}
