@@ -6,10 +6,12 @@ function onOff() {
 
     if (button.innerText == "On") {
         display.style.backgroundColor = "#313131";
+        display.disabled = true;
         clearNumeros();
     }
     else {
         display.style.backgroundColor = "#798369";
+        display.disabled = false;
         clearNumeros();
 
     }
