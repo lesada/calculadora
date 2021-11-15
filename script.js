@@ -16,14 +16,15 @@ function onOff() {
 }
 
 function displayButtons(button) {
-    let pattern = new RegExp("[+-\/\*]");
+    let pattern = new RegExp("[+-\/\*√]");
 
 
-    if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/"))
+    if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/"  || button == "√")) 
         calc();
 
-    if (isOnOff.innerText == "Off")
+    if (isOnOff.innerText == "Off") {
         display.value += button;
+    }
 
 }
 
@@ -46,12 +47,13 @@ function calc() {
             result = parseFloat(numbers[i]) * parseFloat(numbers[i + 1]);
         else if (operator == "/")
             result = parseFloat(numbers[i]) / parseFloat(numbers[i + 1]);
-
-
     }
 
     if (operator == "√") {
-        result = Math.sqrt(parseFloat(numbers[0]));
+        if(numbers[1])
+        result = numbers[0]*(Math.sqrt(parseFloat(numbers[numbers.length -1])));
+        else
+        result = Math.sqrt(parseFloat(numbers[numbers.length -1]));
     }
 
     result = result.toFixed(3);
