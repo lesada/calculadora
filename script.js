@@ -117,6 +117,4 @@ document.addEventListener('keydown', function (event) {
         default: return
 
     }
-
-    console.log(event.keyCode)
 });
