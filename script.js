@@ -54,7 +54,7 @@ function calc() {
 
         result = result.toFixed(10);
 
-        display.value = result;
+        display.value = parseFloat(result);
 
     }
 
