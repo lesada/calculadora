@@ -27,11 +27,6 @@ function displayButtons(button) {
 
 }
 
-
-function clearNumbers() {
-    display.value = "";
-}
-
 function calc() {
     const numbersRegex = /[0-9]+/g
     const operatorsRegex = /[+-\/\*]/g
@@ -59,6 +54,15 @@ function calc() {
     }
 
 
+}
+
+
+function clearNumbers() {
+    display.value = "";
+}
+
+function clearLastNumber() {
+    display.value = display.value.substring(0, display.value.length - 1);
 }
 
 document.addEventListener('keydown', function (event) {
