@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="styles.css">
     <title>Calculator</title>
 </head>
@@ -18,9 +19,9 @@
 
         <div class="buttons-div">
             <div class="advanced-operators">
-                <button>%</button>
                 <button>√</button>
                 <button onClick="clearNumbers()">CE</button>
+                <button><i class="material-icons">backspace</i></button>
                 <button onClick="onOff()" id="onOff">On</button>
             </div>
             <div class="numeros">
@@ -55,4 +56,5 @@
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>
