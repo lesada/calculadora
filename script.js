@@ -18,10 +18,17 @@ function onOff() {
 function displayButtons(button) {
     let isOnOff = document.getElementById("onOff");
     let display = document.getElementById("display");
+    let pattern = new RegExp("[+-\/\*]");
+
+    if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/")) {
+     calcular();
+    }
 
     if (isOnOff.innerText == "Off")
         display.value += button;
+
 }
+
 
 function clearNumeros() {
     let display = document.getElementById("display");
