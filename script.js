@@ -36,13 +36,13 @@ function calc() {
     const numbersRegex = /[0-9]+/g
     const operatorsRegex = /[+-\/\*]/g
 
-    let operator = display.value.match( operatorsRegex ).join( );
+    let operator = display.value.match(operatorsRegex).join();
     let numbers = [];
     let result = 0;
 
-    numbers = display.value.match( numbersRegex );
+    numbers = display.value.match(numbersRegex);
 
-    for(let i = 0; i < (numbers.length - 1); i++) {
+    for (let i = 0; i < (numbers.length - 1); i++) {
         if (operator == "+")
             result = parseFloat(numbers[i]) + parseFloat(numbers[i + 1]);
         else if (operator == "-")
@@ -52,9 +52,9 @@ function calc() {
         else if (operator == "/")
             result = parseFloat(numbers[i]) / parseFloat(numbers[i + 1]);
 
-    result = result.toFixed(10);
+        result = result.toFixed(10);
 
-    display.value = result;
+        display.value = result;
 
     }
 
