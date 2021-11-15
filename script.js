@@ -1,24 +1,25 @@
 function onOff() {
-    var button = document.getElementById("onOff");
+    var isOnOff = document.getElementById("onOff");
     var display = document.getElementById("display");
 
-    button.innerText == "On" ? button.innerText = "Off" : button.innerText = "On";
+    isOnOff.innerText == "On" ? isOnOff.innerText = "Off" : isOnOff.innerText = "On";
 
-    if (button.innerText == "On") {
+    if (isOnOff.innerText == "On") {
         display.style.backgroundColor = "#313131";
         display.disabled = true;
-        clearNumeros();
     }
     else {
         display.style.backgroundColor = "#798369";
         display.disabled = false;
-        clearNumeros();
-
     }
+    clearNumeros();
 }
 
 function displayButtons(button) {
+    var isOnOff = document.getElementById("onOff");
     var display = document.getElementById("display");
+
+    if(isOnOff.innerText == "Off") 
     display.value += button;
 }
 
