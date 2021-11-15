@@ -33,7 +33,31 @@ function clearNumbers() {
 }
 
 function calc() {
-    display.value = eval(display.value);
+    const numbersRegex = /[0-9]+/g
+    const operatorsRegex = /[+-\/\*]/g
+
+    let operator = display.value.match( operatorsRegex ).join( );
+    let numbers = [];
+    let result = 0;
+
+    numbers = display.value.match( numbersRegex );
+
+    for(let i = 0; i < (numbers.length - 1); i++) {
+        if (operator == "+")
+            result = parseFloat(numbers[i]) + parseFloat(numbers[i + 1]);
+        else if (operator == "-")
+            result = parseFloat(numbers[i]) - parseFloat(numbers[i + 1]);
+        else if (operator == "*")
+            result = parseFloat(numbers[i]) * parseFloat(numbers[i + 1]);
+        else if (operator == "/")
+            result = parseFloat(numbers[i]) / parseFloat(numbers[i + 1]);
+
+    result = result.toFixed(10);
+
+    display.value = result;
+
+    }
+
 
 }
 
@@ -109,13 +133,14 @@ document.addEventListener('keydown', function (event) {
             displayButtons('/');
             break;
 
+        case 188:
         case 190:
             displayButtons('.');
             break;
 
         case 13:
             calc();
-            break; 
+            break;
 
         default: return
 
