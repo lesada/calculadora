@@ -19,7 +19,7 @@ function displayButtons(button) {
     let pattern = new RegExp("[+-\/\*]");
 
     if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/"))
-        calcular();
+        calc();
 
 
     if (isOnOff.innerText == "Off")
@@ -32,7 +32,7 @@ function clearNumbers() {
     display.value = "";
 }
 
-function calcular() {
+function calc() {
     display.value = eval(display.value);
 
 }
@@ -114,7 +114,7 @@ document.addEventListener('keydown', function (event) {
             break;
 
         case 13:
-            calcular();
+            calc();
             break; 
 
         default: return
