@@ -4,7 +4,7 @@ body {
     background-color: #88a9b6;
 }
 
-.calculadora {
+.calculator {
     background-color: pink;
 
     width: 20rem;
@@ -18,7 +18,7 @@ body {
 
 }
 
-.botoes {
+.buttons-div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -66,7 +66,7 @@ input:focus {
     flex-direction: column;
 }
 
-.operadores-avancados {
+.advanced-operators {
     display: flex;
 }
 

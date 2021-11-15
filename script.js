@@ -12,7 +12,7 @@ function onOff() {
         display.style.backgroundColor = "#798369";
         display.disabled = false;
     }
-    clearNumeros();
+    clearNumbers();
 }
 
 function displayButtons(button) {
@@ -28,7 +28,7 @@ function displayButtons(button) {
 }
 
 
-function clearNumeros() {
+function clearNumbers() {
     display.value = "";
 }
 
