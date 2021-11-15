@@ -52,7 +52,7 @@ function calc() {
         else if (operator == "/")
             result = parseFloat(numbers[i]) / parseFloat(numbers[i + 1]);
 
-        result = result.toFixed(10);
+        result = result.toFixed(3);
 
         display.value = parseFloat(result);
 
