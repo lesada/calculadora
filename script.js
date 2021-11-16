@@ -16,8 +16,9 @@ function onOff() {
 }
 
 function displayButtons(button) {
-    let pattern = new RegExp("[+-\/\*√]");
+    let pattern = new RegExp("[+\-\/\*√]");
 
+debugger
 
     if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/"  || button == "√")) 
         calc();
@@ -30,7 +31,7 @@ function displayButtons(button) {
 
 function calc() {
     const numbersRegex = /[0-9]+/g
-    const operatorsRegex = /[+-\/\*√]/g
+    const operatorsRegex = /[+\-\/\*√]/g
 
     let operator = display.value.match(operatorsRegex).join();
     let numbers = [];
