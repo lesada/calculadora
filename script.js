@@ -16,19 +16,20 @@ function onOff() {
 }
 
 function displayButtons(button) {
-    let pattern = new RegExp("[+'-'\/\*√]");
+    let pattern = new RegExp("[+'-'\/\*√\.]");
 
-    if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/"  || button == "√")) 
+    if ((button == getLastNumber()) && (pattern.test(button)))
+        return;
+
+    if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/" || button == "√"))
         calc();
 
     if (isOnOff.innerText == "Off") {
         display.value += button;
     }
-
 }
 
 function calc() {
-    debugger
     const numbersRegex = /[0-9]+([\.]?)+([0-9]?)+/g
     const operatorsRegex = /[+'-'\/\*√]/g
 
@@ -50,17 +51,12 @@ function calc() {
     }
 
     if (operator == "√") {
-        if(numbers[1])
-        result = numbers[0]*(Math.sqrt(parseFloat(numbers[numbers.length -1])));
+        if (numbers[1])
+            result = numbers[0] * (Math.sqrt(parseFloat(numbers[numbers.length - 1])));
         else
-        result = Math.sqrt(parseFloat(numbers[numbers.length -1]));
+            result = Math.sqrt(parseFloat(numbers[numbers.length - 1]));
     }
-
     display.value = parseFloat(result.toFixed(3));
-
-
-
-
 }
 
 
@@ -70,6 +66,10 @@ function clearNumbers() {
 
 function clearLastNumber() {
     display.value = display.value.substring(0, display.value.length - 1);
+}
+
+function getLastNumber() {
+    return display.value.substring(display.value.length - 1);
 }
 
 document.addEventListener('keydown', function (event) {
