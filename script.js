@@ -16,9 +16,9 @@ function onOff() {
 }
 
 function displayButtons(button) {
-    let pattern = new RegExp("[+'-'\/\*√\.]");
+    let pattern = new RegExp("[+'-'\/\*√]");
 
-    if ((button == getLastNumber()) && (pattern.test(button)))
+    if ((button == getLastNumber()) && button == '.')
         return;
 
     if ((pattern.test(display.value)) && (button == "+" || button == "-" || button == "*" || button == "/" || button == "√"))
